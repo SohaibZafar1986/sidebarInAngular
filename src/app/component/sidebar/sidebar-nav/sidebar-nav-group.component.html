@@ -12,12 +12,7 @@
 
 <ng-template #iconTemplate let-item>
   <i *ngIf="item?.icon" [ngClass]="item | cSidebarNavIcon"></i>
-  <ng-template [ngIf]="item?.iconComponent">
-    <svg
-      [cIcon]="item.iconComponent?.content"
-      [name]="item.iconComponent?.name"
-      [customClasses]="item | cSidebarNavIcon"
-    ></svg>
-  </ng-template>
   <span *ngIf="!item?.icon && !item?.iconComponent" [ngClass]="item | cSidebarNavIcon"></span>
 </ng-template>
+
+
