@@ -14,15 +14,10 @@ export abstract class SidebarNavService {
 export class SidebarNavHelper {
 
   itemType(item: INavData): string {
-    if (item.divider) {
-      return 'divider';
-    } else if (item.title) {
-      return 'title';
-    } else if (item.children && item.children.length > 0 ) {
+     if (item.children && item.children.length > 0 ) {
       return 'group';
-    } else if (item.label) {
-      return 'label';
-    } else if (!Object.keys(item).length) {
+    }
+    else if (!Object.keys(item).length) {
       return 'empty';
     } else {
       return 'link';
@@ -35,7 +30,7 @@ export class SidebarNavHelper {
 
   public hasBadge = (item: INavData) => Boolean(item.badge);
   public hasIcon = (item: INavData) => Boolean(item.icon) || item.icon === '';
-  public hasIconComponent = (item: INavData) => Boolean(item.iconComponent);
+  // public hasIconComponent = (item: INavData) => Boolean(item.iconComponent);
 
   public getIconClass(item: INavData): any {
     const classes = {

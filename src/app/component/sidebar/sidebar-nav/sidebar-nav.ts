@@ -16,10 +16,10 @@ export interface INavBadge {
   class?: string;
 }
 
-export interface INavLabel {
-  class?: string;
-  variant: string;
-}
+// export interface INavLabel {
+//   class?: string;
+//   variant: string;
+// }
 
 export interface INavLinkProps {
   queryParams?: { [k: string]: any };
@@ -47,7 +47,7 @@ export interface INavData {
   attributes?: INavAttributes;
   divider?: boolean;
   class?: string;
-  label?: INavLabel;
+  // label?: INavLabel;
   wrapper?: INavWrapper;
   linkProps?: INavLinkProps;
 }
