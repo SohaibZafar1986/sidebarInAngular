@@ -9,23 +9,23 @@
       [routerLinkActiveOptions]="{exact: true}"
     >
     </c-sidebar-nav-group>
-    <c-sidebar-nav-divider
-      *ngSwitchCase="'divider'"
-      [item]="item"
-      [ngClass]="item | cSidebarNavItemClass"
-      [cHtmlAttr]="item.attributes ?? {}">
-    </c-sidebar-nav-divider>
-    <c-sidebar-nav-title
-      *ngSwitchCase="'title'"
-      [item]="item"
-      [ngClass]="item | cSidebarNavItemClass"
-      [cHtmlAttr]="item.attributes ?? {}">
-    </c-sidebar-nav-title>
-    <c-sidebar-nav-label
-      *ngSwitchCase="'label'"
-      [item]="item"
-      [ngClass]="item | cSidebarNavItemClass">
-    </c-sidebar-nav-label>
+<!--    <c-sidebar-nav-divider-->
+<!--      *ngSwitchCase="'divider'"-->
+<!--      [item]="item"-->
+<!--      [ngClass]="item | cSidebarNavItemClass"-->
+<!--      [cHtmlAttr]="item.attributes ?? {}">-->
+<!--    </c-sidebar-nav-divider>-->
+<!--    <c-sidebar-nav-title-->
+<!--      *ngSwitchCase="'title'"-->
+<!--      [item]="item"-->
+<!--      [ngClass]="item | cSidebarNavItemClass"-->
+<!--      [cHtmlAttr]="item.attributes ?? {}">-->
+<!--    </c-sidebar-nav-title>-->
+<!--    <c-sidebar-nav-label-->
+<!--      *ngSwitchCase="'label'"-->
+<!--      [item]="item"-->
+<!--      [ngClass]="item | cSidebarNavItemClass">-->
+<!--    </c-sidebar-nav-label>-->
     <ng-container
       *ngSwitchCase="'empty'">
     </ng-container>
