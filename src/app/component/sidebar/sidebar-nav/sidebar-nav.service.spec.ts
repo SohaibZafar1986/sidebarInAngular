@@ -32,7 +32,7 @@ describe('SidebarNavHelper', () => {
       name: 'Dropdown',
       url: '/dashboard',
     }]})).toEqual('group');
-    expect(service.itemType({label: { variant: 'info' }})).toEqual('label');
+    // expect(service.itemType({label: { variant: 'info' }})).toEqual('label');
     expect(service.itemType({})).toEqual('empty');
     expect(service.itemType({
       name: 'Disabled',
