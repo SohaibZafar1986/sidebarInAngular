@@ -17,9 +17,6 @@ export class UserComponent implements OnInit {
       icon: 'fa fa-home ',
       badge: {text: 'New', color: 'black'},
     },
-      {
-        label: { variant: "One" , class:"Info" }
-      },
     {
       name: 'Profile',
       url: '/pro',
