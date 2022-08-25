@@ -14,12 +14,13 @@ export abstract class SidebarNavService {
 export class SidebarNavHelper {
 
   itemType(item: INavData): string {
-     if (item.children && item.children.length > 0 ) {
+     if (item.children && item.children.length > 0 ){
       return 'group';
-    }
-    else if (!Object.keys(item).length) {
+    } else if (!Object.keys(item).length) {
       return 'empty';
-    } else {
+    }else if(item.type === "checkbox"){
+      return 'checkbox';
+     } else {
       return 'link';
     }
   }
