@@ -73,18 +73,42 @@ export class UserComponent implements OnInit {
     },
     {
       name: 'Explore',
-      url: '/expore',
       icon: 'fas fa-search',
       children: [
         {
-          name: 'Groups',
-          url:  '/group',
-          icon: 'fas fa-columns',
+          name: 'Type of job',
+          children:[
+            {
+              name: 'Full Time',
+              badge: {text: '75', color: 'light'},
+              type: 'checkbox',
+            },
+            {
+              name: 'Gigs',
+              badge: {text: '126', color: 'light'},
+              type: 'checkbox',
+            },
+          ]
         },
         {
-          name: 'Hashtags',
-          url:  '/hashtags',
-          icon: 'fas fa-comments',
+          name: 'Experience Level',
+          children:[
+            {
+              name: 'Entry ',
+              badge: {text: '75', color: 'light'},
+              type: 'checkbox',
+            },
+            {
+              name: 'Junior ',
+              badge: {text: '75', color: 'light'},
+              type: 'checkbox',
+            },
+            {
+              name: 'Middle ',
+              badge: {text: '75', color: 'light'},
+              type: 'checkbox',
+            },
+          ]
         }
       ],
     },
