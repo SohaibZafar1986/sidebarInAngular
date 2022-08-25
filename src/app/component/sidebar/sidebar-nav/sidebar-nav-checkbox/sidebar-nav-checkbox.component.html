@@ -1,0 +1,5 @@
+  <div class="pb-3 d-flex align-items-center checkbox-text-col ps-3">
+      <input  type="{{item.type}}" id="vehicle1" name="vehicle1" value="Bike" class="me-1 form-check-input" >
+      <ng-container  >{{item?.name ?? ''}}</ng-container>
+      <span *ngIf="helper.hasBadge(item)" [ngClass]="item | cSidebarNavBadge">{{ item.badge?.text }}</span>
+  </div>
