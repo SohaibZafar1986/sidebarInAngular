@@ -12,5 +12,6 @@ export { SidebarNavBadgePipe } from './sidebar-nav-badge.pipe';
 export { SidebarNavItemClassPipe } from './sidebar-nav-item-class.pipe';
 export { SidebarNavLinkPipe } from './sidebar-nav-link.pipe';
 export { INavData } from './sidebar-nav';
+export { SidebarNavCheckboxComponent } from './sidebar-nav-checkbox/sidebar-nav-checkbox.component';
 
 

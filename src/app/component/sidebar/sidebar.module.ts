@@ -26,7 +26,8 @@ import {
   SidebarNavLinkComponent,
   SidebarNavLinkContentComponent,
   SidebarNavLinkPipe,
-  SidebarNavTitleComponent
+  SidebarNavTitleComponent,
+  SidebarNavCheckboxComponent
 } from './sidebar-nav';
 
 
@@ -48,6 +49,7 @@ import {
     SidebarNavLinkContentComponent,
     SidebarNavLinkPipe,
     SidebarNavTitleComponent,
+    SidebarNavCheckboxComponent,
     // SidebarHeaderComponent,
     // SidebarFooterComponent,
   ],
