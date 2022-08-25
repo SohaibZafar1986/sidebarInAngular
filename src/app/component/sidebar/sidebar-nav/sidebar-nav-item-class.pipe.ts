@@ -20,9 +20,11 @@ export class SidebarNavItemClassPipe implements PipeTransform {
       } else if (itemType === 'group') {
         // itemClass = 'c-sidebar-nav-group' ;
         itemClass = '' ;
+      } else if(itemType === 'checkbox'){
+        itemClass = 'checkbox';
       } else {
         itemClass = 'nav-item';
       }
-      return item.class ? `${itemClass} ${item.class}` : itemClass;
+    return item.class ? `${itemClass} ${item.class}` : itemClass;
     }
 }
