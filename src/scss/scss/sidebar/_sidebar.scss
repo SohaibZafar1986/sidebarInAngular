@@ -321,3 +321,8 @@
     @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
   }
 }
+
+//Checkbox colors
+.checkbox-text-col{
+  color: var(--#{$prefix}sidebar-nav-link-color);
+}
