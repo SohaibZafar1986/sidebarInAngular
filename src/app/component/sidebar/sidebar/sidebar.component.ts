@@ -26,12 +26,11 @@ import { SidebarBackdropService } from '../sidebar-backdrop/sidebar-backdrop.ser
 })
 export class SidebarComponent implements OnChanges, OnDestroy, OnInit {
 
-  static ngAcceptInputType_narrow: BooleanInput;
+
   static ngAcceptInputType_overlaid: BooleanInput;
   static ngAcceptInputType_unfoldable: BooleanInput;
   static ngAcceptInputType_visible: BooleanInput;
 
-  private _narrow = false;
   private _overlaid = false;
   private _unfoldable = false;
   private _visible = false;
@@ -50,17 +49,6 @@ export class SidebarComponent implements OnChanges, OnDestroy, OnInit {
    */
   @Input() id?: string;
 
-  /**
-   * Make sidebar narrow. [docs]
-   * @type boolean
-   */
-  @Input()
-  set narrow(value: boolean) {
-    this._narrow = coerceBooleanProperty(value);
-  }
-  get narrow() {
-    return this._narrow;
-  }
 
   /**
    * Set sidebar to overlaid variant.
@@ -159,8 +147,6 @@ export class SidebarComponent implements OnChanges, OnDestroy, OnInit {
     return {
       sidebar: true,
       'sidebar-fixed': this.position === 'fixed' && !mobile,
-      'sidebar-narrow': this.narrow && !this.unfoldable,
-      'sidebar-narrow-unfoldable': unfoldable,
       'sidebar-overlaid': this.overlaid,
       [`sidebar-${this.size}`]: !!this.size,
       show: visible && this.onMobile,
@@ -184,7 +170,7 @@ export class SidebarComponent implements OnChanges, OnDestroy, OnInit {
     const newStateMap = new Map();
     newStateMap.set('sidebar', this);
 
-    const propList = ['visible', 'unfoldable', 'narrow'];
+    const propList = ['visible', 'unfoldable'];
 
     for (const propName in changes) {
       if (propList.includes(propName)) {
@@ -205,7 +191,6 @@ export class SidebarComponent implements OnChanges, OnDestroy, OnInit {
 
   setInitialState(): void {
     this.sidebarService.toggle({
-      narrow: this.narrow,
       visible: this.visible,
       unfoldable: this.unfoldable,
       sidebar: this

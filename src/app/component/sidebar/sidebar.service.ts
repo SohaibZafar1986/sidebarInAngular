@@ -7,7 +7,6 @@ export interface ISidebarAction {
   unfoldable?: boolean | 'toggle';
   visible?: boolean | 'toggle';
   toggle?: 'visible' | 'unfoldable';
-  narrow?: boolean;
   mobile?: boolean;
   sidebar?: SidebarComponent;
   id?: string;
