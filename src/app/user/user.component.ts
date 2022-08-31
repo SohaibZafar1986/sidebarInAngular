@@ -109,9 +109,56 @@ export class UserComponent implements OnInit {
               type: 'checkbox',
             },
           ]
-        }
+        },
+        // {
+        //   name: 'Salary Range',
+        //   children:[
+        //     {
+        //       name: 'Entry ',
+        //     },
+        //   ]
+        // }
       ],
     },
+     {
+       name: 'Job Board',
+       url: '/dashboard',
+       icon: 'fa fa-th',
+       children: [
+         {
+           name: 'Jobs',
+           url:  '/connection',
+           icon: 'fas fa-user-friends',
+         },
+         {
+           name: 'Projects',
+           url:  '/group',
+           icon: 'fas fa-users',
+         },
+         {
+           name: 'Services',
+           url:  '/event',
+           icon: 'fas fa-paste',
+         },
+       ],
+     },
+     {
+       name: 'Companies',
+       url: '/dashboard',
+       icon: 'fa fa-building',
+       children: [
+         {
+           name: 'My Companies',
+           url:  '/connection',
+           icon: 'fas fa-user-friends',
+         },
+         {
+           name: 'Jobs',
+           url:  '/group',
+           icon: 'fas fa-columns',
+         },
+       ],
+     },
   ]
 
     brandImage : any = {
